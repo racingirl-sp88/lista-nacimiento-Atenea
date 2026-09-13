@@ -11,6 +11,10 @@
     #__bundler_thumbnail svg { width: 100%; height: 100%; object-fit: contain; }
     #__bundler_placeholder { color: #999; font-size: 14px; }
   </style>
+
+  <!-- 1. Carga de la librería de Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
   <noscript>
     <style>#__bundler_loading { display: none; }</style>
     <div style="position:fixed;bottom:12px;left:12px;font:13px/1.4 -apple-system,BlinkMacSystemFont,sans-serif;color:#999;background:rgba(255,255,255,0.9);padding:6px 12px;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.08);z-index:10000;">
@@ -20,17 +24,24 @@
 </head>
 <body>
   <div id="__bundler_thumbnail">
-  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-    <rect width="1200" height="800" fill="#f3faf9"></rect>
-    <circle cx="600" cy="360" r="200" fill="#cdf1eb"></circle>
-    <circle cx="600" cy="360" r="140" fill="#2e9d92"></circle>
-    <text x="600" y="420" font-family="Georgia, serif" font-size="160" fill="#ffffff" text-anchor="middle">A</text>
-    <rect x="420" y="620" width="360" height="26" rx="13" fill="#d9eaf7"></rect>
-  </svg>
-</div>
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1200" height="800" fill="#f3faf9"></rect>
+      <circle cx="600" cy="360" r="200" fill="#cdf1eb"></circle>
+      <circle cx="600" cy="360" r="140" fill="#2e9d92"></circle>
+      <text x="600" y="420" font-family="Georgia, serif" font-size="160" fill="#ffffff" text-anchor="middle">A</text>
+      <rect x="420" y="620" width="360" height="26" rx="13" fill="#d9eaf7"></rect>
+    </svg>
+  </div>
   <div id="__bundler_loading">Unpacking...</div>
 
+  <!-- 2. Inicio de tu código JavaScript conectado a Supabase -->
   <script>
+    const SUPABASE_URL = 'https://funjulbilsudutqudzjz.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_k2vtpBRLOPpw9pJzUscdPA_t-jEv...'; // Reemplaza por tu Publishable key completa
+
+    const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+    // Continúa con el resto de tu lógica de JavaScript aquí...
     
 document.addEventListener('DOMContentLoaded', async function() {
   const loading = document.getElementById('__bundler_loading');
